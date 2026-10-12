@@ -13,11 +13,15 @@ test('tie-break sorts by earlier manufacture date, then smaller quantity', () =>
   const records = [
     { uid: 'VG-B-2026-000100', vaccineName: 'Pentavalent', batchNo: 'B100', manufactureDate: '2025-01-15', expiryDate: '2026-12-31', quantityDoses: 200, unitId: 'ILR-01', slotId: 'A1', dosesPerVial: 10, source: 'simulated' },
     { uid: 'VG-B-2026-000101', vaccineName: 'Pentavalent', batchNo: 'B101', manufactureDate: '2025-01-10', expiryDate: '2026-12-31', quantityDoses: 120, unitId: 'ILR-01', slotId: 'A2', dosesPerVial: 10, source: 'simulated' },
+    { uid: 'VG-B-2026-000102', vaccineName: 'Pentavalent', batchNo: 'B102', manufactureDate: '2025-01-10', expiryDate: '2026-12-31', quantityDoses: 80, unitId: 'ILR-01', slotId: 'A3', dosesPerVial: 10, source: 'simulated' },
   ];
 
   const sorted = sortFefoRecords(records, new Date('2026-01-01T00:00:00+05:30'));
-  assert.equal(sorted[0].uid, 'VG-B-2026-000101');
-  assert.equal(sorted[1].uid, 'VG-B-2026-000100');
+  assert.deepEqual(sorted.map((record) => record.uid), [
+    'VG-B-2026-000102',
+    'VG-B-2026-000101',
+    'VG-B-2026-000100',
+  ]);
 });
 
 test('expired batches are pinned to the top and excluded from issue order numbering', () => {

@@ -1,0 +1,67 @@
+[
+  {
+    "uid": "VG-SAMPLE-EXPIRED",
+    "vaccineName": "Pentavalent",
+    "batchNo": "DEMO-EXPIRED",
+    "manufactureDate": "2025-01-15",
+    "expiryDate": "2026-10-04",
+    "quantityDoses": 100,
+    "dosesPerVial": 10,
+    "unitId": "ILR-01",
+    "slotId": "A1",
+    "status": "ok",
+    "source": "simulated"
+  },
+  {
+    "uid": "VG-SAMPLE-CRITICAL",
+    "vaccineName": "Measles-Rubella",
+    "batchNo": "DEMO-CRITICAL",
+    "manufactureDate": "2025-04-18",
+    "expiryDate": "2026-10-12",
+    "quantityDoses": 80,
+    "dosesPerVial": 10,
+    "unitId": "ILR-01",
+    "slotId": "A2",
+    "status": "ok",
+    "source": "simulated"
+  },
+  {
+    "uid": "VG-SAMPLE-HIGH",
+    "vaccineName": "BCG",
+    "batchNo": "DEMO-HIGH",
+    "manufactureDate": "2025-03-02",
+    "expiryDate": "2026-10-20",
+    "quantityDoses": 60,
+    "dosesPerVial": 20,
+    "unitId": "ILR-01",
+    "slotId": "A3",
+    "status": "reserved",
+    "source": "simulated"
+  },
+  {
+    "uid": "VG-SAMPLE-NORMAL",
+    "vaccineName": "OPV",
+    "batchNo": "DEMO-NORMAL",
+    "manufactureDate": "2025-06-11",
+    "expiryDate": "2026-11-15",
+    "quantityDoses": 120,
+    "dosesPerVial": 20,
+    "unitId": "Cold Room A",
+    "slotId": "B1",
+    "status": "ok",
+    "source": "simulated"
+  },
+  {
+    "uid": "VG-SAMPLE-LOW",
+    "vaccineName": "Td",
+    "batchNo": "DEMO-LOW",
+    "manufactureDate": "2025-09-14",
+    "expiryDate": "2027-01-18",
+    "quantityDoses": 90,
+    "dosesPerVial": 10,
+    "unitId": "Cold Room A",
+    "slotId": "B2",
+    "status": "quarantined",
+    "source": "simulated"
+  }
+]
